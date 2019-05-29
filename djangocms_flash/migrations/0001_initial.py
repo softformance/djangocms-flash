@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Flash',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(serialize=False, parent_link=True, auto_created=True, to='cms.CMSPlugin', primary_key=True)),
+                ('cmsplugin_ptr', models.OneToOneField(serialize=False, parent_link=True, auto_created=True, to='cms.CMSPlugin', primary_key=True, on_delete=models.CASCADE)),
                 ('file', models.FileField(help_text='use swf file', upload_to=cms.models.pluginmodel.get_plugin_media_path, verbose_name='file')),
                 ('width', models.CharField(verbose_name='width', max_length=6)),
                 ('height', models.CharField(verbose_name='height', max_length=6)),
